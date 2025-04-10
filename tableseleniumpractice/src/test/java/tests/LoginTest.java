@@ -16,7 +16,7 @@ public class LoginTest extends BaseTest {
         System.out.println("Login attempted with: " + username + " / " + password);
     }
     
-    @Test
+    
     public void failingOnPurpose() {
     	Assert.assertTrue(false);
     }

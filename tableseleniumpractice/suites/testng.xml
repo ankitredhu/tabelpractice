@@ -2,6 +2,7 @@
 <suite name="Listeners Test">
 	<listeners>
 		<listener class-name="listeners.TestListener"></listener>
+		<listener class-name="listeners.RetryListener"></listener>
 	</listeners>
 	<test name="Listeners Test">
 		<classes>

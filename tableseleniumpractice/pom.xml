@@ -44,4 +44,20 @@
 </dependency>
 
   </dependencies>
+  
+  <build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.0.0</version> <!-- You can use 2.22.2 if 3.0.0 doesn't work for you -->
+      <configuration>
+        <suiteXmlFiles>
+          <suiteXmlFile>suites/testng.xml</suiteXmlFile>
+        </suiteXmlFiles>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+
 </project>
