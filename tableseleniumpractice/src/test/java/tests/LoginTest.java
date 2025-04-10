@@ -2,6 +2,8 @@ package tests;
 
 import base.BaseTest;
 import dataproviders.ExcelDataProvider;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
@@ -12,5 +14,10 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(username, password);
         System.out.println("Login attempted with: " + username + " / " + password);
+    }
+    
+    @Test
+    public void failingOnPurpose() {
+    	Assert.assertTrue(false);
     }
 }
