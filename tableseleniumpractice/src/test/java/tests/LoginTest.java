@@ -14,10 +14,8 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(username, password);
         System.out.println("Login attempted with: " + username + " / " + password);
+        System.out.println("Testing Webhook");
+        
     }
     
-    
-    public void failingOnPurpose() {
-    	Assert.assertTrue(false);
-    }
 }
