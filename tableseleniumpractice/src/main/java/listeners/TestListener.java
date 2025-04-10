@@ -1,39 +1,52 @@
 package listeners;
 
+import java.io.File;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import base.BaseTest;
+import utils.ExtentManager;
 import utils.ScreenshotUtil;
 
 public class TestListener implements ITestListener {
 	
+	private static ExtentReports extent = ExtentManager.getExtentReports();
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+	
 	@Override
 	public void onTestStart(ITestResult result) {
-		System.out.println("Test Started: " + result.getName());
+		ExtentTest test = extent.createTest(result.getMethod().getMethodName());
+		extentTest.set(test);
 	}
 	
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		System.out.println("Test Passed: " + result.getName());
+		extentTest.get().log(Status.PASS, "Test Passed");
 	}
 	
 	 @Override
 	    public void onTestFailure(ITestResult result) {
-	        System.out.println("Test Failed: " + result.getName());
+	        extentTest.get().log(Status.FAIL,"Test Failed "+ result.getThrowable());
 	        
 	        Object testClass = result.getInstance();
 	        WebDriver driver = ((BaseTest)testClass).getDriver();
 	        
-	        ScreenshotUtil.captureScreenshot(driver, result.getName());
+	        String destPath = ScreenshotUtil.captureScreenshot(driver, result.getName());
+	        
+	        extentTest.get().addScreenCaptureFromPath(System.getProperty("user.dir")+File.separator+destPath);
 	        
 	    }
 
 	    @Override
 	    public void onTestSkipped(ITestResult result) {
-	        System.out.println("Test Skipped: " + result.getName());
+	       extentTest.get().log(Status.SKIP,"Test skipped "+ result.getThrowable());
 	    }
 
 	    @Override
@@ -43,6 +56,7 @@ public class TestListener implements ITestListener {
 
 	    @Override
 	    public void onFinish(ITestContext context) {
+	    	extent.flush();
 	        System.out.println("Test Suite Finished: " + context.getName());
 	    }
 	

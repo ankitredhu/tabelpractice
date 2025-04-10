@@ -13,13 +13,14 @@ import org.openqa.selenium.WebDriver;
 
 public class ScreenshotUtil {
 	
-	public static void captureScreenshot(WebDriver driver, String testName) {
+	public static String captureScreenshot(WebDriver driver, String testName) {
 		
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		File src = screenshot.getScreenshotAs(OutputType.FILE);
 		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-		String destPath = "screenshots"+File.separator+testName+timestamp+".png";
 		testName = testName.replaceAll("[^a-zA-Z0-9-_]", "_");
+		String destPath = "screenshots"+File.separator+testName+timestamp+".png";
+		
 		
 		try {
 			Files.createDirectories(Paths.get("screenshots"));
@@ -29,6 +30,8 @@ public class ScreenshotUtil {
 		catch(IOException e) {
 			e.printStackTrace();
 		}
+		
+		return destPath;
 	}
 
 }

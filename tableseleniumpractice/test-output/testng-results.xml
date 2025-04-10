@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-10T14:32:06 IST" name="Listeners Test" finished-at="2025-04-10T14:32:11 IST" duration-ms="4742">
+  <suite started-at="2025-04-10T16:49:05 IST" name="Listeners Test" finished-at="2025-04-10T16:49:10 IST" duration-ms="4906">
     <groups>
     </groups>
-    <test started-at="2025-04-10T14:32:06 IST" name="Listeners Test" finished-at="2025-04-10T14:32:11 IST" duration-ms="4742">
+    <test started-at="2025-04-10T16:49:05 IST" name="Listeners Test" finished-at="2025-04-10T16:49:10 IST" duration-ms="4906">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@402c4085]" started-at="2025-04-10T14:32:03 IST" name="setup" finished-at="2025-04-10T14:32:06 IST" duration-ms="3731" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@71812481]" started-at="2025-04-10T16:49:02 IST" name="setup" finished-at="2025-04-10T16:49:05 IST" duration-ms="3363" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="failingOnPurpose()[pri:0, instance:tests.LoginTest@402c4085]" started-at="2025-04-10T14:32:06 IST" name="failingOnPurpose" finished-at="2025-04-10T14:32:06 IST" duration-ms="68" status="FAIL">
+        <test-method signature="failingOnPurpose()[pri:0, instance:tests.LoginTest@71812481]" started-at="2025-04-10T16:49:06 IST" name="failingOnPurpose" finished-at="2025-04-10T16:49:06 IST" duration-ms="66" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -57,7 +57,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failingOnPurpose -->
-        <test-method signature="testLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@402c4085]" started-at="2025-04-10T14:32:08 IST" name="testLogin" data-provider="loginData" finished-at="2025-04-10T14:32:09 IST" duration-ms="1066" status="PASS">
+        <test-method signature="testLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@71812481]" started-at="2025-04-10T16:49:08 IST" name="testLogin" data-provider="loginData" finished-at="2025-04-10T16:49:09 IST" duration-ms="1067" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -73,7 +73,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method signature="testLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@402c4085]" started-at="2025-04-10T14:32:09 IST" name="testLogin" data-provider="loginData" finished-at="2025-04-10T14:32:10 IST" duration-ms="520" status="PASS">
+        <test-method signature="testLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@71812481]" started-at="2025-04-10T16:49:09 IST" name="testLogin" data-provider="loginData" finished-at="2025-04-10T16:49:09 IST" duration-ms="545" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -89,7 +89,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method signature="testLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@402c4085]" started-at="2025-04-10T14:32:10 IST" name="testLogin" data-provider="loginData" finished-at="2025-04-10T14:32:10 IST" duration-ms="529" status="PASS">
+        <test-method signature="testLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@71812481]" started-at="2025-04-10T16:49:09 IST" name="testLogin" data-provider="loginData" finished-at="2025-04-10T16:49:10 IST" duration-ms="556" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -105,7 +105,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method signature="testLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@402c4085]" started-at="2025-04-10T14:32:10 IST" name="testLogin" data-provider="loginData" finished-at="2025-04-10T14:32:11 IST" duration-ms="628" status="PASS">
+        <test-method signature="testLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@71812481]" started-at="2025-04-10T16:49:10 IST" name="testLogin" data-provider="loginData" finished-at="2025-04-10T16:49:10 IST" duration-ms="605" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -121,7 +121,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@402c4085]" started-at="2025-04-10T14:32:11 IST" name="tearDown" finished-at="2025-04-10T14:32:12 IST" duration-ms="376" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@71812481]" started-at="2025-04-10T16:49:11 IST" name="tearDown" finished-at="2025-04-10T16:49:11 IST" duration-ms="428" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
